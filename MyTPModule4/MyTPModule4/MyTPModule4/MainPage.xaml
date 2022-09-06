@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyTPModule4.MainPage">
+
+    <StackLayout>
+        <StackLayout BackgroundColor="#58B0F0" Orientation="Horizontal">
+            <Label Text="Nouveau" TextColor="White" FontSize="Subtitle" Padding="10,25,10,25" />
+            <Label Text="Acceuil" TextColor="White" FontSize="Subtitle" Padding="10,25,10,25" />
+            <Label Text="Recherche" TextColor="White" FontSize="Subtitle" Padding="10,25,10,25" />
+        </StackLayout>
+
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="10,25,10,25">
+                    <BoxView Color="Black" 
+                         WidthRequest="40"
+                         HeightRequest="120"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"/>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="cedric" TextColor="Black" FontSize="Subtitle" Padding="10,25,10,25"/>
+                            <Label Text="@cedricmilliauraux" TextColor="Black" FontSize="Subtitle" Padding="10,25,10,25"/>
+                            <Label Text="50s" TextColor="Gray" FontSize="Subtitle" Padding="10,25,10,25" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." TextColor="Black" FontSize="Subtitle" Padding="10,25,10,25"/>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Répondre" TextColor="Black" FontSize="Subtitle" Padding="10,25,10,25" HorizontalTextAlignment="Start"/>
+                    <Label Text="Retweet" TextColor="Black" FontSize="Subtitle" Padding="10,25,10,25" HorizontalTextAlignment="Center"/>
+                    <Label Text="Favoris" TextColor="Black" FontSize="Subtitle" Padding="10,25,10,25" HorizontalTextAlignment="End"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+        
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand">
+            <Label Text="Fil" TextColor="#2196F3" FontSize="Subtitle" Padding="10,10,10,10"/>
+            <Label Text="Notifications" FontSize="Subtitle" Padding="10,10,10,10"/>
+            <Label Text="Messages" FontSize="Subtitle" Padding="10,10,10,10"/>
+            <Label Text="Moi" FontSize="Subtitle" Padding="10,10,10,10"/>
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>

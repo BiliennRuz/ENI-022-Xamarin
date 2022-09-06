@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\HelloWorldNatif"
+    "\\MyTPModule4",
+    "\\MyTPModule4\\MyTPModule4",
+    "\\MyTPModule4\\MyTPModule4\\MyTPModule4"
   ],
+  "SelectedNode": "\\MyTPModule4\\MyTPModule4\\MyTPModule4\\MainPage.xaml",
   "PreviewInSolutionExplorer": false
 }
