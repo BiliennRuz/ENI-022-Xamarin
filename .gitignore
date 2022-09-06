@@ -1,0 +1,6 @@
+bin/
+obj/
+*.userprefs
+.packages
+
+# End of https://mrkandreev.name/snippets/gitignore-generator/#XamarinStudio
