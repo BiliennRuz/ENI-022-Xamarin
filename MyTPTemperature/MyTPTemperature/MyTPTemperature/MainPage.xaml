@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyTPTemperature.MainPage">
+
+    <StackLayout>
+        <Frame Padding="10">
+            <Label Text="Convertisseur" FontSize="Title" HorizontalTextAlignment="Center"/>
+        </Frame>
+        <StackLayout>
+            <Label Text="Convertisseur Celsius/Fahrenheit" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="TempCelcius" Placeholder="Rensigner la T° en °C" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Completed="TempCelcius_Completed"/>
+                <Label Text="°C" FontSize="Large" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="TempFahrenheit" Placeholder="Rensigner la T° en °F" HorizontalTextAlignment="Center" HorizontalOptions="FillAndExpand" Completed="TempFahrenheit_Completed"/>
+                <Label Text="°F" FontSize="Large" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <Button Text="Sauvegarder" Clicked="Button_Clicked"/>
+            <ListView x:Name="List">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="25,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding TempCelcius}"/>
+                                    <Label Text="°C" HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding TempFahrenheit}"/>
+                                    <Label Text="°F"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
