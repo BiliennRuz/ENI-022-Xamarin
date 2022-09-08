@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TemperatureForms.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Text="Convertir Celsius / Fahrenheit" />
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+            <Entry TextChanged="EntryCelsius_TextChanged" x:Name="EntryCelsius" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Placeholder="Renseignez des °C" />
+
+            <Label Text="°C" VerticalOptions="Center" />
+
+        </StackLayout>
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+            <Entry TextChanged="EntryFahrenheit_TextChanged" x:Name="EntryFahrenheit" Keyboard="Numeric" HorizontalOptions="FillAndExpand" Placeholder="Renseignez des °F" />
+
+            <Label Text="°F" VerticalOptions="Center" />
+
+        </StackLayout>
+
+        <Button Text="Sauvegarder" Clicked="Button_Clicked" />
+
+        <ListView x:Name="ListViewData" ItemTapped="ListViewData_ItemTapped" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Celsius}" />
+                                <Label Text="°C" />
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Far}" />
+                                <Label Text="°F" />
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+
+</ContentPage>
