@@ -38,5 +38,9 @@ namespace MyTPTemperature
             TempCelcius.Text = TemperatureConverter.CelciusFromFahrenheit(Convert.ToDouble(TempFahrenheit.Text)); 
         }
 
+        private void List_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            enregistrements.RemoveAt(e.ItemIndex);
+        }
     }
 }

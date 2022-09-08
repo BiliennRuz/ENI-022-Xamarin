@@ -18,14 +18,14 @@
                 <Label Text="°F" FontSize="Large" VerticalOptions="CenterAndExpand"/>
             </StackLayout>
             <Button Text="Sauvegarder" Clicked="Button_Clicked"/>
-            <ListView x:Name="List">
+            <ListView x:Name="List" ItemTapped="List_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Padding="25,0">
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding TempCelcius}"/>
-                                    <Label Text="°C" HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="°C =" HorizontalOptions="FillAndExpand"/>
                                 </StackLayout>
                                 <StackLayout Orientation="Horizontal">
                                     <Label Text="{Binding TempFahrenheit}"/>
