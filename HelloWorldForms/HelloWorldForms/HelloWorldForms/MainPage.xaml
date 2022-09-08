@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelloWorldForms.MainPage">
+
+    <StackLayout>
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="#58B0F0" Padding="10,25,10,25">
+
+            <ImageButton Source="pencil" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" />
+            
+            <Label Text="Accueil" TextColor="White" FontSize="18" />
+
+            <ImageButton Source="search" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" />
+
+        </StackLayout>
+
+        <StackLayout VerticalOptions="FillAndExpand" Padding="20" x:Name="StackLayoutConnexion">
+            <Label Text="Connexion à Twitter" HorizontalOptions="Center" FontSize="Title" />
+
+            <Entry Placeholder="Identifiant / Email" x:Name="EntryUsername"/>
+            <Entry Placeholder="Mot de passe" IsPassword="True" x:Name="EntryPassword"/>
+
+            <StackLayout Orientation="Horizontal">
+                <Switch x:Name="SwitchSaveConnexion" />
+
+                <Label Text="Mémoriser mes informations" VerticalOptions="Center" />
+
+            </StackLayout>
+
+            <Label FontSize="16" TextColor="Red" x:Name="LabelError" />
+
+            <Button Text="Se connecter" Clicked="Button_Clicked" />
+
+
+        </StackLayout>
+        
+
+        <ScrollView VerticalOptions="FillAndExpand" IsVisible="false" x:Name="ScrollViewTwitter">
+            <StackLayout Padding="20">
+                <StackLayout Orientation="Horizontal" HeightRequest="100" VerticalOptions="Start" >
+
+                    <BoxView
+                        WidthRequest="50"
+                        HeightRequest="150"
+                        BackgroundColor="Black"/>
+
+                    <StackLayout Padding="15,0,0,0" HorizontalOptions="FillAndExpand">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                            <Label Text="Mathieu"/>
+
+                            <Label Text="@MathieuPseudo"/>
+                            
+                            <Label Text="50s" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+
+                        <Label Text="texte du tweet" />
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Margin="0,20,0,0">
+                    <ImageButton Source="reply" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent"/>
+                    <ImageButton Source="retweet"  BackgroundColor="Transparent" />
+                    <ImageButton Source="favorite" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" />
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+        
+
+        <StackLayout Orientation="Horizontal" Padding="10,25">
+
+            <Label Text="Fil" TextColor="Gray" HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Notifications" TextColor="Gray" HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Messages" TextColor="Gray" HorizontalOptions="CenterAndExpand" />
+            
+            <Label Text="Profil" TextColor="Gray" HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
