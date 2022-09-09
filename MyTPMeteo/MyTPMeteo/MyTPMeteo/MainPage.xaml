@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyTPMeteo.MainPage"
+             Title="Météo">
+
+    <StackLayout Spacing="0">
+
+     
+        <StackLayout BackgroundColor="#86FF4E" Padding="20" Orientation="Horizontal">
+            <Entry Placeholder="Entrez une ville" x:Name="EntryCity" HorizontalOptions="FillAndExpand" BackgroundColor="White"/>
+
+            <Button Text="OK" Clicked="Button_Clicked"/>
+        </StackLayout>
+
+        <StackLayout Spacing="16" Margin="0,15,0,0">
+            <Label x:Name="LabelCity" Text="Ville" HorizontalOptions="Center"/>
+            <Label x:Name="LabelTemperature" Text="Température" HorizontalOptions="Center"/>
+            <Image x:Name="ImageIcon" MinimumWidthRequest="300" MinimumHeightRequest="200" HeightRequest="200" WidthRequest="200" HorizontalOptions="Center"/>
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
